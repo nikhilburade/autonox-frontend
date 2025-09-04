@@ -1,0 +1,258 @@
+/* BASE IMPORTS */
+@import "tailwindcss";
+
+/* Dark variant support */
+@custom-variant dark (&:is(.dark *));
+
+/* THEME TOKENS */
+@theme {
+  --font-*: initial;
+  --font-inter: Inter, sans-serif;
+
+  /* Core Colors */
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-white: #ffffff;
+  --color-black: #181c31;
+  --color-primary: #006bff;
+  --color-primaryho: #0063ec;
+  --color-meta: #20c5a8;
+  --color-stroke: #eeeeee;
+  --color-strokedark: #2d2f40;
+  --color-waterloo: #757693;
+  --color-manatee: #999aa1;
+
+  /* Shadows */
+  --shadow-soft: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-solid: 0px 10px 120px rgba(45, 74, 170, 0.1);
+
+  /* Containers */
+  --container-c-1390: 86.875rem;
+  --container-c-1280: 80rem;
+  --container-c-1016: 63.5rem;
+
+  /* Z-index */
+  --z-index-1: 1;
+  --z-index-999: 999;
+  --z-index-99999: 99999;
+}
+
+/* BASE RESET */
+@layer base {
+  * {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  /* DARK AND LIGHT MODE */
+  body {
+    @apply relative z-1 font-inter text-base font-normal text-waterloo bg-white dark:bg-black dark:text-manatee;
+  }
+}
+
+/* COMPONENTS */
+@layer components {
+
+  /* ✅ Main section padding (Top + Bottom) */
+  .section-padding {
+    @apply py-6 md:py-8 xl:py-12;
+  }
+
+  /* ✅ Top only */
+  .section-padding-top {
+    @apply pt-6 md:pt-8 xl:pt-12;
+  }
+
+  /* ✅ Bottom only */
+  .section-padding-bottom {
+    @apply pb-6 md:pb-8 xl:pb-12;
+  }
+
+  /* Div tag padding (LEFT AND RIGHT PADDING)*/
+  .div-padding {
+    @apply mx-auto max-w-c-1390 px-4 md:px-6 lg:px-10;
+  }
+  .div-padding-bottom {
+    @apply mx-auto max-w-c-1390 px-4 md:px-6 lg:px-10;
+  }
+
+  /* Header padding = work of this section is done*/
+  .header-padding {
+    @apply mx-auto max-w-c-1390 px-4 md:px-6 lg:px-10 flex items-center justify-between h-16 md:h-20;
+  }
+
+  /* Headings */
+  .heading-primary {
+    @apply text-4xl font-bold leading-snug text-black dark:text-white md:text-4xl lg:text-5xl;
+  }
+
+  .heading-secondprimary {
+    @apply font-bold text-black dark:text-white leading-snug;
+    font-size: clamp(1.75rem, 3vw + 0.5rem, 2.75rem);
+    max-width: 22ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /*secondary heading */
+  .heading-secondary {
+    @apply text-2xl font-semibold text-black dark:text-white md:text-3xl;
+  }
+
+  /* Sentence */
+  .sentence {
+    @apply text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl 2xl:text-2xl text-black dark:text-white leading-relaxed;
+  }
+
+
+  /* normal hover */
+  .norm-hover {
+    @apply text-black dark:text-white hover:scale-105 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-600 hover:bg-clip-text hover:text-transparent
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 px-7.5 py-3 text-white font-medium transition-transform duration-200 hover:scale-105 hover:from-indigo-600 hover:to-purple-700 active:scale-95;
+  }
+
+  /* Secondary button */
+  .btn-secondary {
+    @apply flex items-center justify-center rounded-full border border-black dark:border-white px-7.5 py-3 text-black dark:text-white transition-transform duration-200 hover:scale-105 hover:bg-gray-100 dark:hover:bg-white/10 active:scale-95;
+  }
+
+  /* Cards */
+  .card {
+    @apply rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md dark:border-gray-800 dark:bg-black;
+  }
+
+  /* Gradients */
+  .gradient-text {
+    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-400 bg-clip-text text-transparent;
+  }
+
+  /* Gradient for button */
+  .gradient-btn {
+    @apply rounded-full px-6 py-3 font-medium text-white bg-gradient-to-r from-indigo-500 to-purple-600 transition duration-300 ease-in-out hover:opacity-90 active:scale-95;
+  }
+
+  /* Media Box (Universal Image/Video container) */
+  .media-box {
+    @apply relative aspect-[700/444] w-full overflow-hidden rounded-2xl border shadow-xl border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900;
+  }
+
+  /* content shape inside media container */
+  .media-content {
+    @apply w-full h-full object-cover rounded-2xl;
+  }
+}
+
+/* UTILITIES */
+@utility no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@utility img-white {
+  filter: invert(0%) sepia(96%) saturate(15%) hue-rotate(249deg) brightness(100%) contrast(105%);
+}
+
+/* Features animation */
+@layer utilities {
+  @keyframes feature-float {
+
+    0%,
+    100% {
+      transform: translateY(0)
+    }
+
+    50% {
+      transform: translateY(-6px)
+    }
+  }
+
+  .animate-feature-float {
+    animation: feature-float 4s ease-in-out infinite;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(12px)
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0)
+    }
+  }
+
+  .animate-fade-up {
+    animation: fadeUp .6s ease forwards;
+  }
+}
+
+/* THIRD-PARTY OVERRIDES */
+@layer utilities {
+  .testimonial-01 .swiper-pagination-bullet {
+    @apply h-2.5 w-2.5 bg-stroke opacity-100;
+  }
+
+  .testimonial-01 .swiper-pagination-bullet-active {
+    @apply w-5 rounded-full bg-primary;
+  }
+
+  .testimonial-01 .swiper-pagination {
+    @apply relative pt-[50px];
+  }
+}
+
+/* Header sliding animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Custom FAQ Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.5); /* slate-500 */
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 116, 139, 0.8);
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
