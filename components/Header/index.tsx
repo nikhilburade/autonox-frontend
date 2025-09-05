@@ -58,7 +58,7 @@ const Header = () => {
                 alt="logo"
                 width={50}
                 height={30}
-                className="hidden dark:block w-[35px] sm:w-[40px] md:w-[45px] lg:w-[50px]"
+                className="hidden dark:block"
               />
 
               {/* Light mode logo */}
@@ -68,7 +68,7 @@ const Header = () => {
                 width={50}
                 height={30}
                 priority
-                className="dark:hidden w-[35px] sm:w-[40px] md:w-[45px] lg:w-[50px]"
+                className="dark:hidden"
               />
             </Link>
 
