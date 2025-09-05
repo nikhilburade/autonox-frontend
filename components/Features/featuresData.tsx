@@ -10,66 +10,53 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: Icon1,
-    title: "AI-Powered Insights",
+    title: "Dynamic Business Dashboards",
     description:
-      "Get actionable recommendations powered by advanced AI to optimize performance and make smarter decisions in real-time.",
+      "Track growth with real-time insights, analytics, and performance metrics—all in one place.",
   },
   {
     id: 2,
     icon: Icon2,
-    title: "Seamless Collaboration",
+    title: "Omnichannel Automation",
     description:
-      "Work together with your team in one shared workspace, with live updates and secure access controls.",
+      "Automate emails, WhatsApp, and SMS campaigns to nurture leads and engage customers effortlessly.",
   },
   {
     id: 3,
     icon: Icon3,
-    title: "Automation Workflows",
+    title: "Built-In CRM Power",
     description:
-      "Eliminate repetitive tasks by building custom workflows that save time and boost productivity.",
+      "Manage leads, clients, and interactions with a streamlined CRM that keeps everything organized.",
   },
   {
     id: 4,
     icon: Icon4,
-    title: "Advanced Analytics",
+    title: "AI-Powered Social Media Content",
     description:
-      "Visualize key metrics with intuitive dashboards and track performance with real-time analytics.",
+      "Get tailored, ready-to-post content for your brand personalized to engage your audience and boost visibility.",
   },
   {
     id: 5,
     icon: Icon5,
-    title: "Customizable Integrations",
+    title: "Conversion-Optimized Landing Pages",
     description:
-      "Easily integrate with your favorite tools like Slack, Zapier, and Google Workspace with just a few clicks.",
+      "Launch stunning, high-converting landing pages in minutes—designed to capture leads and drive sales.",
   },
   {
     id: 6,
     icon: Icon6,
-    title: "Enterprise-Grade Security",
+    title: "All-In-One Growth Hub",
     description:
-      "Your data is encrypted with bank-level security standards and compliant with global regulations.",
+      "A single platform that combines automation, analytics, and marketing tools—so your business runs on autopilot.",
   },
   {
     id: 7,
-    icon: Icon1,
-    title: "Scalable Infrastructure",
-    description:
-      "From startups to enterprises, our cloud-native platform scales seamlessly as your business grows.",
-  },
-  {
-    id: 8,
     icon: Icon2,
     title: "24/7 Customer Support",
     description:
       "Our expert team is available round the clock to help you with onboarding, troubleshooting, and more.",
   },
-  {
-    id: 9,
-    icon: Icon3,
-    title: "Smart Personalization",
-    description:
-      "Deliver tailored experiences to your users with intelligent personalization powered by machine learning.",
-  },
+  
 ];
 
 export default featuresData;
