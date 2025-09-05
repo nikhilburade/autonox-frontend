@@ -54,11 +54,11 @@ const Header = () => {
           <Link href="/" className="block">
               {/* Dark mode logo */}
               <Image
-                src="/images/brand/brand-08.svg"
+                src="/images/logo/2.png"
                 alt="logo"
                 width={50}
                 height={30}
-                className="hidden dark:block"
+                className="hidden dark:block w-[35px] sm:w-[40px] md:w-[45px] lg:w-[50px]"
               />
 
               {/* Light mode logo */}
@@ -68,7 +68,7 @@ const Header = () => {
                 width={50}
                 height={30}
                 priority
-                className="dark:hidden"
+                className="dark:hidden w-[35px] sm:w-[40px] md:w-[45px] lg:w-[50px]"
               />
             </Link>
 
