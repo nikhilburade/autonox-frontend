@@ -38,7 +38,7 @@ const Header = () => {
     >
       <div className="header-padding flex items-center justify-between">
         {/* Left side (logo + menu + hamburger on mobile) */}
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-5">
           {/* Mobile Hamburger */}
           <button
             aria-label="Menu"
@@ -58,7 +58,7 @@ const Header = () => {
                 alt="logo"
                 width={50}
                 height={30}
-                className="hidden dark:block w-[35px] sm:w-[40px] md:w-[45px] lg:w-[50px]"
+                className="hidden dark:block w-[30px] sm:w-[35px] md:w-[40px] lg:w-[50px]"
               />
 
               {/* Light mode logo */}
@@ -68,13 +68,13 @@ const Header = () => {
                 width={50}
                 height={30}
                 priority
-                className="dark:hidden w-[35px] sm:w-[40px] md:w-[45px] lg:w-[50px]"
+                className="dark:hidden w-[30px] sm:w-[35px] md:w-[40px] lg:w-[50px]"
               />
             </Link>
 
         {/* Desktop Menu */}
         <nav className={`${navigationOpen ? "is-open" : ""} hidden lg:block`}>
-          <ul className="flex items-center gap-8 text-[17px]">
+          <ul className="flex items-center gap-6 text-[17px]">
             {menuData
               .filter((menuItem) => !menuItem.submenu)
               .map((menuItem) => (
