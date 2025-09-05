@@ -50,21 +50,23 @@ const Header = () => {
             <span className="h-0.5 w-6 bg-black dark:bg-white"></span>
           </button>
 
-          {/* Logo */}
+          {/* Logo (with controllable size) */}
           <Link href="/" className="block">
             <Image
-              src="/images/logo/logo-dark.svg"
+              src="/images/logo/icon.svg"
               alt="logo"
-              width={120}
-              height={32}
-              className="hidden dark:block"
+              width={250} // intrinsic size
+              height={120}
+              priority
+              className="hidden dark:block w-[250px] h-auto"
             />
             <Image
-              src="/images/logo/logo-light.svg"
+              src="/images/logo/icon-black.svg"
               alt="logo"
-              width={120}
-              height={32}
-              className="dark:hidden"
+              width={250}
+              height={120}
+              priority
+              className="dark:hidden w-[250px] h-auto"
             />
           </Link>
 
@@ -109,7 +111,7 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Mobile CTA (only Get Started) */}
+          {/* Mobile CTA */}
           <div className="flex items-center gap-2 lg:hidden">
             <div className="scale-90">
               <ThemeToggler />
@@ -121,11 +123,10 @@ const Header = () => {
               Get Started
             </Link>
           </div>
-
         </div>
       </div>
 
-      {/* Mobile Menu with animation */}
+      {/* Mobile Menu */}
       {navigationOpen && (
         <div className="lg:hidden animate-slide-down bg-white dark:bg-black px-6 py-4 shadow-md">
           <ul className="flex flex-col gap-4 text-[17px]">
@@ -136,17 +137,16 @@ const Header = () => {
                   <Link
                     href={menuItem.path || "#"}
                     onClick={() => setNavigationOpen(false)}
-                    className={`block transition-colors hover:text-primary ${pathUrl === menuItem.path
-                      ? "text-primary font-medium"
-                      : "text-black dark:text-white"
-                      }`}
+                    className={`block transition-colors hover:text-primary ${
+                      pathUrl === menuItem.path
+                        ? "text-primary font-medium"
+                        : "text-black dark:text-white"
+                    }`}
                   >
                     {menuItem.title}
                   </Link>
                 </li>
               ))}
-
-            {/* 👇 Extra Log in (only visible in mobile menu) */}
             <li>
               <Link
                 href="/auth/login"
@@ -159,7 +159,6 @@ const Header = () => {
           </ul>
         </div>
       )}
-
     </header>
   );
 };
