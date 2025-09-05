@@ -14,7 +14,7 @@ const Feature = () => {
       <div className="div-padding text-center">
         {/* Section Header */}
         <h1 className="heading-secondprimary text-center">
-          Core Features of Nexora
+          Core Features of Autonox
         </h1>
 
         {/* Features Grid */}

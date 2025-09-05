@@ -23,10 +23,10 @@ const Footer = () => {
             >
               <a href="/" className="inline-block">
                 <Image
-                  src="/images/logo/logo-dark.svg"
+                  src="/images/logo/2.png"
                   alt="Logo"
-                  width={110}
-                  height={80}
+                  width={80}
+                  height={60}
                 />
               </a>
 
@@ -38,10 +38,10 @@ const Footer = () => {
                 Contact
               </p>
               <a
-                href="mailto:hello@solid.com"
+                href="mailto:autonox2025@gmail.com"
                 className="text-sm font-medium text-gray-200 hover:text-primary"
               >
-                hello@solid.com
+                autonox2025@gmail.com
               </a>
             </motion.div>
 
@@ -190,7 +190,7 @@ const Footer = () => {
             }}
             className="text-gray-500"
           >
-            &copy; {new Date().getFullYear()} Solid. All rights reserved.
+            &copy; {new Date().getFullYear()} Autonox. All rights reserved.
           </motion.p>
 
           <motion.div

@@ -17,16 +17,14 @@ const Hero = () => {
 
   const [text] = useTypewriter({
     words: [
+      "Intelligence",
       "Automation",
-      "Insights",
-      "Analytics",
-      "Engagement",
-      "Growth",
+      "Systems",
+      "Clarity",
+      "Innovation",
+      "Power",
       "Efficiency",
-      "Prediction",
-      "Scaling",
-      "Control",
-      "Optimization",
+      "Integration",
     ],
 
 
@@ -71,7 +69,7 @@ const Hero = () => {
           <div className="w-full lg:w-1/2 min-w-0 space-y-6">
             {/* Heading */}
             <h1 className="heading-secondprimary max-w-[20ch]">
-              Enhance your Business <br />
+              Tranform your Business <br />
               with <span className="gradient-text">{text}</span>
               <Cursor cursorStyle="|" />
             </h1>
@@ -95,10 +93,10 @@ const Hero = () => {
 
             {/* Paragraph */}
             <p className="sentence max-w-[600px]">
-              Automate your daily workflows, track performance in real time, and
-              gain personalized insights that actually drive growth. Our AI
-              doesn’t just suggest — it works alongside you, executing tasks and
-              scaling your business 24/7.
+              At Autonox, we help businesses automate what slows them down and scale what matters most. From AI-powered dashboards and seamless CRM to one-click multi-channel campaigns and personalized content, our solutions are built to save time, cut costs, and drive unstoppable growth.
+            </p>
+            <p className="sentence max-w-[600px]">
+              Stop working harder. Start working smarter - with Intelligence that transforms your business
             </p>
 
             {/* Buttons */}

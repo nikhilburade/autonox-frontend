@@ -12,7 +12,7 @@ import Testimonial from "@/components/Testimonial";
 import Finalcta from "@/components/finalecta";
 
 export const metadata: Metadata = {
-  title:  "Nexora - AI Personalized Growth & Automation",
+  title:  "Autonox",
 
   // other metadata
   description: "Nexora helps businesses grow faster with AI-powered personalization and automation."

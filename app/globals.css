@@ -71,11 +71,8 @@
   .div-padding {
     @apply mx-auto max-w-c-1390 px-4 md:px-6 lg:px-10;
   }
-  .div-padding-bottom {
-    @apply mx-auto max-w-c-1390 px-4 md:px-6 lg:px-10;
-  }
 
-  /* Header padding = work of this section is done*/
+  /* Header padding and height */
   .header-padding {
     @apply mx-auto max-w-c-1390 px-4 md:px-6 lg:px-10 flex items-center justify-between h-16 md:h-20;
   }
@@ -127,7 +124,7 @@
 
   /* Gradients */
   .gradient-text {
-    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-500 bg-clip-text text-transparent;
   }
 
   /* Gradient for button */
@@ -237,7 +234,8 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: rgba(100, 116, 139, 0.5); /* slate-500 */
+  background-color: rgba(100, 116, 139, 0.5);
+  /* slate-500 */
   border-radius: 9999px;
 }
 
@@ -252,7 +250,8 @@
 
 /* Hide scrollbar for IE, Edge, and Firefox */
 .scrollbar-hidden {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
-}
-
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+} 

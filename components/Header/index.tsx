@@ -38,11 +38,11 @@ const Header = () => {
     >
       <div className="header-padding flex items-center justify-between">
         {/* Left side (logo + menu + hamburger on mobile) */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-8">
           {/* Mobile Hamburger */}
           <button
             aria-label="Menu"
-            className="lg:hidden flex flex-col gap-1 p-2"
+            className="lg:hidden flex flex-col gap-1.5"
             onClick={() => setNavigationOpen(!navigationOpen)}
           >
             <span className="h-0.5 w-6 bg-black dark:bg-white"></span>
@@ -52,114 +52,117 @@ const Header = () => {
 
           {/* Logo (with controllable size) */}
           <Link href="/" className="block">
-            <Image
-              src="/images/logo/icon.svg"
-              alt="logo"
-              width={250} // intrinsic size
-              height={120}
-              priority
-              className="hidden dark:block w-[250px] h-auto"
-            />
-            <Image
-              src="/images/logo/icon-black.svg"
-              alt="logo"
-              width={250}
-              height={120}
-              priority
-              className="dark:hidden w-[250px] h-auto"
-            />
-          </Link>
+              {/* Dark mode logo */}
+              <Image
+                src="/images/logo/2.png"
+                alt="logo"
+                width={50}
+                height={30}
+                className="hidden dark:block w-[35px] sm:w-[40px] md:w-[45px] lg:w-[50px]"
+              />
 
-          {/* Desktop Menu */}
-          <nav className={`${navigationOpen ? "is-open" : ""} hidden lg:block`}>
-            <ul className="flex items-center gap-8 text-[17px]">
-              {menuData
-                .filter((menuItem) => !menuItem.submenu)
-                .map((menuItem) => (
-                  <li key={menuItem.id}>
-                    <Link
-                      href={menuItem.path || "#"}
-                      className={`relative block transition-all duration-200 
-                        text-black dark:text-white 
-                        hover:scale-110 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-600 hover:bg-clip-text hover:text-transparent
-                        ${pathUrl === menuItem.path ? "font-semibold" : ""}`}
-                    >
-                      {menuItem.title}
-                    </Link>
-                  </li>
-                ))}
-            </ul>
-          </nav>
-        </div>
-
-        {/* Right side */}
-        <div className="flex items-center gap-5">
-          {/* Desktop buttons + toggler */}
-          <div className="hidden lg:flex items-center gap-6">
-            <ThemeToggler />
-            <Link
-              href="/auth/login"
-              className="btn-secondary text-[15px] px-6 py-2.5"
-            >
-              Log in
+              {/* Light mode logo */}
+              <Image
+                src="/images/logo/2.png"
+                alt="logo"
+                width={50}
+                height={30}
+                priority
+                className="dark:hidden w-[35px] sm:w-[40px] md:w-[45px] lg:w-[50px]"
+              />
             </Link>
-            <Link
-              href="/auth/signup"
-              className="btn-primary text-[15px] px-6 py-2.5"
-            >
-              Get Started
-            </Link>
-          </div>
 
-          {/* Mobile CTA */}
-          <div className="flex items-center gap-2 lg:hidden">
-            <div className="scale-90">
-              <ThemeToggler />
-            </div>
-            <Link
-              href="/auth/signup"
-              className="btn-primary text-xs px-3 py-1.5"
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {navigationOpen && (
-        <div className="lg:hidden animate-slide-down bg-white dark:bg-black px-6 py-4 shadow-md">
-          <ul className="flex flex-col gap-4 text-[17px]">
+        {/* Desktop Menu */}
+        <nav className={`${navigationOpen ? "is-open" : ""} hidden lg:block`}>
+          <ul className="flex items-center gap-8 text-[17px]">
             {menuData
               .filter((menuItem) => !menuItem.submenu)
               .map((menuItem) => (
                 <li key={menuItem.id}>
                   <Link
                     href={menuItem.path || "#"}
-                    onClick={() => setNavigationOpen(false)}
-                    className={`block transition-colors hover:text-primary ${
-                      pathUrl === menuItem.path
-                        ? "text-primary font-medium"
-                        : "text-black dark:text-white"
-                    }`}
+                    className={`relative block transition-all duration-200 
+                        text-black dark:text-white 
+                        hover:scale-110 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-600 hover:bg-clip-text hover:text-transparent
+                        ${pathUrl === menuItem.path ? "font-semibold" : ""}`}
                   >
                     {menuItem.title}
                   </Link>
                 </li>
               ))}
-            <li>
-              <Link
-                href="/auth/login"
-                onClick={() => setNavigationOpen(false)}
-                className="block transition-colors hover:text-primary text-black dark:text-white"
-              >
-                Log in
-              </Link>
-            </li>
           </ul>
+        </nav>
+      </div>
+
+      {/* Right side */}
+      <div className="flex items-center gap-5">
+        {/* Desktop buttons + toggler */}
+        <div className="hidden lg:flex items-center gap-6">
+          <ThemeToggler />
+          <Link
+            href="/auth/login"
+            className="btn-secondary text-[15px] px-6 py-2.5"
+          >
+            Log in
+          </Link>
+          <Link
+            href="/auth/signup"
+            className="btn-primary text-[15px] px-6 py-2.5"
+          >
+            Get Started
+          </Link>
         </div>
-      )}
-    </header>
+
+        {/* Mobile CTA */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <div className="scale-90">
+            <ThemeToggler />
+          </div>
+          <Link
+            href="/auth/signup"
+            className="btn-primary text-xs px-3 py-1.5"
+          >
+            Get Started
+          </Link>
+        </div>
+      </div>
+    </div>
+
+      {/* Mobile Menu */ }
+  {
+    navigationOpen && (
+      <div className="lg:hidden animate-slide-down bg-white dark:bg-black px-6 py-4 shadow-md">
+        <ul className="flex flex-col gap-4 text-[17px]">
+          {menuData
+            .filter((menuItem) => !menuItem.submenu)
+            .map((menuItem) => (
+              <li key={menuItem.id}>
+                <Link
+                  href={menuItem.path || "#"}
+                  onClick={() => setNavigationOpen(false)}
+                  className={`block transition-colors hover:text-primary ${pathUrl === menuItem.path
+                    ? "text-primary font-medium"
+                    : "text-black dark:text-white"
+                    }`}
+                >
+                  {menuItem.title}
+                </Link>
+              </li>
+            ))}
+          <li>
+            <Link
+              href="/auth/login"
+              onClick={() => setNavigationOpen(false)}
+              className="block transition-colors hover:text-primary text-black dark:text-white"
+            >
+              Log in
+            </Link>
+          </li>
+        </ul>
+      </div>
+    )
+  }
+    </header >
   );
 };
 
