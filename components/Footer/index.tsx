@@ -90,7 +90,7 @@ const Footer = () => {
                   Support
                 </h4>
                 <ul className="space-y-2 text-sm">
-                  {["Company", "Press Media", "Our Blog", "Contact Us"].map(
+                  {["Company", "Our Blog", "Contact Us"].map(
                     (item) => (
                       <li key={item}>
                         <a
