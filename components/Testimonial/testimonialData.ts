@@ -7,7 +7,7 @@ export const testimonialData: Testimonial[] = [
     id: 1,
     name: "David S.",
     designation: "Founder @GrowthLabs",
-    image: image1,
+    image: image2,
     content: "This platfrom is awesome! We automated our campains and now things run smooth. No more late nights doing boring work.",
   },
   {
@@ -21,7 +21,7 @@ export const testimonialData: Testimonial[] = [
     id: 3,
     name: "Michael Chen",
     designation: "Ops Manager @FinEdge",
-    image: image1,
+    image: image2,
     content: "Man, setting this up was quick. And it feels like we got an extra teammate working 24/7. Kinda crazy how much time we saved!",
   },
   {
@@ -35,7 +35,7 @@ export const testimonialData: Testimonial[] = [
     id: 5,
     name: "Alex M.",
     designation: "CEO @SmartSolutions",
-    image: image1,
+    image: image2,
     content: "Emails, social media posts, customer followups all automated. I literally just watch results now, lol.",
   },
   {
@@ -49,7 +49,7 @@ export const testimonialData: Testimonial[] = [
     id: 7,
     name: "Robert L.",
     designation: "Product Manager @OptiFlow",
-    image: image1,
+    image: image2,
     content: "Integrating was painless. AI keeps giving tips. Sometimes I forget it’s even running automatically, haha.",
   },
   {
@@ -63,7 +63,7 @@ export const testimonialData: Testimonial[] = [
     id: 9,
     name: "Samuel R.",
     designation: "Owner @LocalBizCo",
-    image: image1,
+    image: image2,
     content: "Small biz here, but this AI helps me reach customers I never could before. Automation is super simple to use.",
   },
   {
@@ -77,7 +77,7 @@ export const testimonialData: Testimonial[] = [
     id: 11,
     name: "Tom H.",
     designation: "Marketing Head @RetailPro",
-    image: image1,
+    image: image2,
     content: "We were sending emails manually, now AI handles everything. I drink coffee while it works, lol.",
   },
   {
@@ -91,7 +91,7 @@ export const testimonialData: Testimonial[] = [
     id: 13,
     name: "Vikram P.",
     designation: "Founder @TechSolutions",
-    image: image1,
+    image: image2,
     content: "Scaling was tough, now AI handles workflow, data tracking, even followups. Feels like my biz just got wings.",
   },
   {
@@ -105,7 +105,7 @@ export const testimonialData: Testimonial[] = [
     id: 15,
     name: "Rahul D.",
     designation: "Operations Lead @AutoTech",
-    image: image1,
+    image: image2,
     content: "I sometimes mess up, but AI keeps track. Helps even my team avoid mistakes. Super helpful!",
   },
   {
@@ -119,7 +119,7 @@ export const testimonialData: Testimonial[] = [
     id: 17,
     name: "Carlos M.",
     designation: "CEO @LogiCorp",
-    image: image1,
+    image: image2,
     content: "Big biz here, AI handles campaigns, analytics, even customer reach. Feels like a full dept working nonstop.",
   },
   {
@@ -140,7 +140,7 @@ export const testimonialData: Testimonial[] = [
     id: 20,
     name: "Meera S.",
     designation: "CEO @BizGrow",
-    image: image1,
+    image: image2,
     content: "Everything automated from reporting to campaign followups. Helps my team focus on strategy, not busywork.",
   },
 ];
