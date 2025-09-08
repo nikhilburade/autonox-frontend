@@ -5,10 +5,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 const Hero = () => {
   const videos = [
-    "/images/hero/hero-video1.mp4",
-    "/images/hero/hero-video2.mp4",
-    "/images/hero/hero-video3.mp4",
-    "/images/hero/hero-video4.mp4",
+    "/images/hero/mainvideo.mp4",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,8 +38,8 @@ const Hero = () => {
       setTimeout(() => {
         setCurrentIndex((i) => (i + 1) % videos.length);
         setFade(true);
-      }, 400);
-    }, 4000);
+      }, );
+    }, );
     return () => clearInterval(interval);
   }, [videos.length]);
 
@@ -102,7 +99,7 @@ const Hero = () => {
             {/* Buttons */}
             <div className="flex flex-wrap gap-5 pt-2">
               <Link
-                href="/auth/signup"
+                href="https://calendly.com/autonox2025/30min"
                 aria-label="Get started"
                 className="btn-primary px-6 py-3 text-lg"
               >
